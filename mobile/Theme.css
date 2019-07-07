@@ -19,28 +19,22 @@ a {color: #FFFFFF;}
 	padding:0px;
 	margin:0px;
 }
-.tableA {
+table {
 	vertical-align: top;
 	display: inline-block;
 	border-collapse: collapse;
 	color: #FFFFFF;
 	font-weight: bold;
 	text-align: center;
-	/*background-color: #1B3DE2;*/
-	/*background-color: #0050EF;*/
-	background-color: #0050EF;	
-}
-.tableB {
-	vertical-align: top;
-	display: inline-block;
-	border-collapse: collapse;
-	color: #FFFFFF;
-	font-weight: bold;
-	text-align: center;
-	/*background-color: green;*/
-	background-color: green;
 }
 tr {border: 1px solid white;}
+
+.tableRDA {background-color: #006A00;}
+.tableRDB {background-color: #6d8044;}
+.tableSA  {background-color: #0050EF;}
+.tableSB  {background-color: #406080;}
+.tableNA  {background-color: #b9522d;}
+.tableNB  {background-color: #825a2c;}
 .cellstyle1 {border: 1px solid white;}
 .navlink {
 	cursor:pointer;
