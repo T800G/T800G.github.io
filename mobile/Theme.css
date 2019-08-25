@@ -5,21 +5,49 @@ body {
 }
 p {color: #FFFFFF;}
 a {color: #FFFFFF;}
+
 .navhdr {
+	color: #FFFFFF;
 	margin:0px;
-	padding:5px;
-	height:2em;
+	padding:6px;
+	height:3em;
+	display:inline-block;
+	/*width:100%;*/
 }
+.hiddendiv {
+color: black;
+background-color: black;
+display: block;
+height: 0px;
+overflow: hidden;
+}
+.navlink {
+	height:50%;
+	cursor:pointer;
+	text-decoration: none;
+	/*color:#2c3e50;*/
+	display: inline-block;
+	padding: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: gray;
+	vertical-align: middle;
+}
+.navlink img {
+  vertical-align: middle;
+  height:80%;
+}
+
 .container {
 	overflow-y:scroll;
 	position:absolute;
-	top:2em;
+	top:3em;
 	bottom:0px;
 	width:100%;
 	padding:0px;
 	margin:0px;
 }
-table {
+.container table {
 	vertical-align: top;
 	display: inline-block;
 	border-collapse: collapse;
@@ -27,7 +55,7 @@ table {
 	font-weight: bold;
 	text-align: center;
 }
-tr {border: 1px solid white;}
+.container tr {border: 1px solid white;}
 
 .tableRDA {background-color: #006A00;}
 .tableRDB {background-color: #6d8044;}
@@ -36,8 +64,3 @@ tr {border: 1px solid white;}
 .tableNA  {background-color: #b9522d;}
 .tableNB  {background-color: #825a2c;}
 .cellstyle1 {border: 1px solid white;}
-.navlink {
-	cursor:pointer;
-	text-decoration: underline;
-	/*color:#2c3e50;*/
-}
