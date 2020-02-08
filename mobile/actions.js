@@ -103,22 +103,25 @@ function JumpToTime()
 
 function JumpToDay()
 {
+	var x = "A";
+	if (window.location.href.indexOf("#B") > -1){ x = "B";}
+
 	var dateObj = new Date;
 	switch (dateObj.getDay())
 	{
     case 0: //Nedelja
-			if (dateObj.getHours() < DAYSTARTHH) { location.replace("zetbus_S_A.html"); }
-			else { location.replace("zetbus_N_A.html"); }
+			if (dateObj.getHours() < DAYSTARTHH) { location.replace("zetbus_S_" + x + ".html"); }
+			else { location.replace("zetbus_N_" + x + ".html"); }
     break;
     case 6: //Subota
-			if (dateObj.getHours() < DAYSTARTHH) { location.replace("zetbus_RD_A.html"); }
-      else { location.replace("zetbus_S_A.html"); }
+			if (dateObj.getHours() < DAYSTARTHH) { location.replace("zetbus_RD_" + x + ".html"); }
+      else { location.replace("zetbus_S_" + x + ".html"); }
     break;
 		case 1: //Pon
-			if (dateObj.getHours() < DAYSTARTHH) { location.replace("zetbus_N_A.html"); }
-      else { location.replace("zetbus_RD_A.html"); }		
+			if (dateObj.getHours() < DAYSTARTHH) { location.replace("zetbus_N_" + x + ".html"); }
+      else { location.replace("zetbus_RD_" + x + ".html"); }		
 		break;
     default: //Ut-Pet
-			location.replace("zetbus_RD_A.html");
+			location.replace("zetbus_RD_" + x + ".html");
     }
 }
