@@ -13,6 +13,7 @@ a {color: #FFFFFF;}
 	height:3em;
 	display:inline-block;
 	/*width:100%;*/
+	/*margin-left:2em;*/
 }
 .hiddendiv {
 color: black;
@@ -54,6 +55,7 @@ overflow: hidden;
 	color: #FFFFFF;
 	font-weight: bold;
 	text-align: center;
+/*margin-left:2em;*/
 }
 .container tr {border: 1px solid white;}
 
@@ -64,3 +66,14 @@ overflow: hidden;
 .tableNA  {background-color: #b9522d;}
 .tableNB  {background-color: #825a2c;}
 .cellstyle1 {border: 1px solid white;}
+
+#outer-div {
+width:100%;
+text-align:center;
+/*background-color:black;*/
+}
+#inner-div {
+display:inline-block;
+margin: 0 auto;
+background-color:black;
+}
