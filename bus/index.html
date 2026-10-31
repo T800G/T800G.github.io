@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Added language attribute for accessibility -->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BUS</title>
+
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<script src="actions.js"></script>
+		
+		<!-- PWA manifest & Theme Color -->
+		<link rel="manifest" href="./manifest.json">
+		<meta name="theme-color" content="#000000"> <!-- Change #000000 to your main app color -->
+
+		<!-- iOS Fallback Icon -->
+		<link rel="apple-touch-icon" href="favicon.png"> <!-- Directs iPhones to use your PWA icon -->
+
+		<!-- PWA service worker -->
+		<script>
+		  if ('serviceWorker' in navigator) {			
+			window.addEventListener('load', () => {
+			  // Using './sw.js' ensures it registers relative to the /mobile/ folder on GitHub
+			  navigator.serviceWorker.register('./sw.js')
+				.then(reg => {
+				  console.log('Service Worker registered successfully!', reg);
+				  // Run the redirect function ONLY after registration completes
+				  if (typeof JumpToDay === 'function') {
+					JumpToDay();
+				  }
+				})
+				.catch(err => {
+				  console.log('Service Worker registration failed:', err);
+				  // Fallback: Redirect anyway if registration errors out
+				  if (typeof JumpToDay === 'function') {
+					JumpToDay();
+				  }
+				});
+			});
+		  } else {
+			// Fallback for browsers that don't support PWAs
+			window.addEventListener('load', () => {
+			  if (typeof JumpToDay === 'function') {
+				JumpToDay();
+			  }
+			});
+		  }
+		</script>
+	</head>
+	<body>	
+	</body>
+</html>
